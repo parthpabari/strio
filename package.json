@@ -1,0 +1,98 @@
+{
+  "name": "@ppabari/strio",
+  "version": "1.0.0",
+  "description": "Cryptographically secure string generation for Node.js and browsers. Tokens, IDs, passphrases, patterns, expiring tokens — bias-free, zero dependencies, fully typed.",
+  "keywords": [
+    "random",
+    "string",
+    "secure",
+    "crypto",
+    "cryptographic",
+    "token",
+    "password",
+    "passphrase",
+    "id",
+    "generator",
+    "typescript",
+    "browser",
+    "node",
+    "bias-free",
+    "short-id",
+    "expiring-token",
+    "otp",
+    "jwt-secret",
+    "api-key",
+    "base58",
+    "base62",
+    "hex-key",
+    "cookie-secret"
+  ],
+  "homepage": "https://github.com/parthpabari/strio#readme",
+  "bugs": {
+    "url": "https://github.com/parthpabari/strio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parthpabari/strio.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Parth Pabari",
+    "url": "https://github.com/parthpabari"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./zod": {
+      "types": "./dist/zod.d.ts",
+      "import": "./dist/zod.js",
+      "require": "./dist/zod.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "strio": "dist/bin/strio.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run build && npm run test"
+  },
+  "peerDependencies": {
+    "zod": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "zod": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0",
+    "zod": "^3.22.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "sideEffects": false
+}
