@@ -1,6 +1,6 @@
 {
   "name": "@ppabari/strio",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Cryptographically secure string generation for Node.js and browsers. Tokens, IDs, passphrases, patterns, expiring tokens — bias-free, zero dependencies, fully typed.",
   "keywords": [
     "random",
